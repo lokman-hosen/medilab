@@ -5,6 +5,7 @@ import Topbar from "./components/topbar";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import MainContent from "./components/mainContent";
+import Footer from "./components/footer";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Navbar />
         <Hero />
         <MainContent />
+        <Footer />
       <Switch>
         <Route path="/" exact />
       </Switch>

@@ -3,6 +3,13 @@ import WhyUs from "./whyUs";
 import AboutUs from "./aboutUs";
 import AssetCount from "./assetCount";
 import Services from "./services";
+import Appointment from "./appointment";
+import Department from "./department";
+import Doctors from "./doctors";
+import Faq from "./faq";
+import Testimonial from "./testimonial";
+import Gallery from "./gallery";
+import Contact from "./contact";
 
 function MainContent() {
     return (
@@ -11,6 +18,13 @@ function MainContent() {
             <AboutUs />
             <AssetCount />
             <Services />
+            <Appointment />
+            <Department />
+            <Doctors />
+            <Faq />
+            <Testimonial />
+            <Gallery />
+            <Contact />
         </div>
     );
 }
