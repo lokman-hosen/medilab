@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import WhyUs from "./whyUs";
 import AboutUs from "./aboutUs";
 import AssetCount from "./assetCount";
-import Services from "./services";
+import Services from "./service/services";
 import Appointment from "./appointment";
 import Department from "./department";
 import Doctors from "./doctors";
