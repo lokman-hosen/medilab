@@ -7,28 +7,106 @@ function SingleItem() {
             name: "Walter White",
             designation: "Chief Medical Officer",
             description: "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
-            image: "doctors-1.jpg"
+            image: "doctors-1.jpg",
+            social: [
+                {
+                    name: "twitter",
+                    url: "https://twitter.com/"
+                },
+                {
+                    name: "facebook",
+                    url: "https://facebook.com"
+                },
+                {
+                    name: "instagram",
+                    url: "https://instagram.com"
+                },
+                {
+                    name: "linkedin",
+                    url: "https://linkedin.com"
+                },
+            ]
         },
         {
             id: 2,
             name: "Sarah Jhonson",
             designation: "Anesthesiologist",
             description: "Aut maiores voluptates amet et quis praesentium qui senda para",
-            image: "doctors-2.jpg"
+            image: "doctors-2.jpg",
+            social: [
+                {
+                    name: "twitter",
+                    url: "https://twitter.com/"
+                },
+                {
+                    name: "facebook",
+                    url: "https://facebook.com"
+                },
+                {
+                    name: "instagram",
+                    url: "https://instagram.com"
+                },
+                {
+                    name: "linkedin",
+                    url: "https://linkedin.com"
+                },
+            ]
         },
         {
             id: 3,
             name: "William Anderson",
             designation: "Cardiology",
             description: "Quisquam facilis cum velit laborum corrupti fuga rerum quia",
-            image: "doctors-3.jpg"
+            image: "doctors-3.jpg",
+            /*social: {
+                twitter: "twitter",
+                facebook: "facebook",
+                instagram: "instagram",
+                linkedin: "linkedin-box",
+            }*/
+            social: [
+                {
+                    name: "twitter",
+                    url: "https://twitter.com/"
+                },
+                {
+                    name: "facebook",
+                    url: "https://facebook.com"
+                },
+                {
+                    name: "instagram",
+                    url: "https://instagram.com"
+                },
+                {
+                    name: "linkedin",
+                    url: "https://linkedin.com"
+                },
+            ]
         },
         {
             id: 4,
             name: "Amanda Jepson",
             designation: "Neurosurgeon",
             description: "Dolorum tempora officiis odit laborum officiis et et accusamus",
-            image: "doctors-4.jpg"
+            image: "doctors-4.jpg",
+            social: [
+                {
+                    name: "twitter",
+                    url: "https://twitter.com/"
+                },
+                {
+                    name: "facebook",
+                    url: "https://facebook.com"
+                },
+                {
+                    name: "instagram",
+                    url: "https://instagram.com"
+                },
+                {
+                    name: "linkedin",
+                    url: "https://linkedin.com"
+                },
+            ]
         }
 
     ]
@@ -47,10 +125,11 @@ function SingleItem() {
                                     <span>{doctor.description}</span>
                                     <p>{doctor.description}</p>
                                     <div className="social">
-                                        <a href=""><i className="ri-twitter-fill"></i></a>
-                                        <a href=""><i className="ri-facebook-fill"></i></a>
-                                        <a href=""><i className="ri-instagram-fill"></i></a>
-                                        <a href=""> <i className="ri-linkedin-box-fill"></i> </a>
+                                        {doctor.social.map((social) => {
+                                                return <a target="_blank" href={social.url}><i className={`ri-${social.name}-fill`}></i></a>
+                                            })
+                                        }
+
                                     </div>
                                 </div>
                             </div>
