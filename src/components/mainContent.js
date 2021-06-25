@@ -5,7 +5,7 @@ import AssetCount from "./assetCount";
 import Services from "./service/services";
 import Appointment from "./appointment";
 import Department from "./department";
-import Doctors from "./doctors";
+import Doctors from "./doctor/doctors";
 import Faq from "./faq";
 import Testimonial from "./testimonial";
 import Gallery from "./gallery";
