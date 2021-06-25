@@ -1,6 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Department() {
+
+    const [tab, setTab] = useState('tab-1');
+
+    // Similar to componentDidMount and componentDidUpdate:
+    useEffect(() => {
+       //alert(tab)
+
+    });
+
+
+
     return (
         <div>
             <section id="departments" className="departments">
@@ -17,26 +28,25 @@ function Department() {
                         <div className="col-lg-3">
                             <ul className="nav nav-tabs flex-column">
                                 <li className="nav-item">
-                                    <a className="nav-link active show" data-bs-toggle="tab"
-                                       href="#tab-1">Cardiology</a>
+                                    <a className={`nav-link ${tab == 'tab-1' ? 'active show' : ''}`} data-bs-toggle="tab" onClick={() => setTab('tab-1')} >Cardiology</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-2">Neurology</a>
+                                    <a className={`nav-link ${tab == 'tab-2' ? 'active show' : ''}`} data-bs-toggle="tab" onClick={() => setTab('tab-2')} >Neurology</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-3">Hepatology</a>
+                                    <a className={`nav-link ${tab == 'tab-3' ? 'active show' : ''}`} onClick={() => setTab('tab-3')} data-bs-toggle="tab" >Hepatology</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-4">Pediatrics</a>
+                                    <a className={`nav-link ${tab == 'tab-4' ? 'active show' : ''}`} onClick={() => setTab('tab-4')} data-bs-toggle="tab" >Pediatrics</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-5">Eye Care</a>
+                                    <a className={`nav-link ${tab == 'tab-5' ? 'active show' : ''}`} onClick={() => setTab('tab-5')} data-bs-toggle="tab" >Eye Care</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="col-lg-9 mt-4 mt-lg-0">
                             <div className="tab-content">
-                                <div className="tab-pane active show" id="tab-1">
+                                <div className={`tab-pane ${tab == 'tab-1' ? 'active show' : ''}`} id="tab-1">
                                     <div className="row">
                                         <div className="col-lg-8 details order-2 order-lg-1">
                                             <h3>Cardiology</h3>
@@ -52,7 +62,8 @@ function Department() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="tab-pane" id="tab-2">
+
+                                <div className={`tab-pane ${tab == 'tab-2' ? 'active show' : ''}`} id="tab-2">
                                     <div className="row">
                                         <div className="col-lg-8 details order-2 order-lg-1">
                                             <h3>Et blanditiis nemo veritatis excepturi</h3>
@@ -68,7 +79,7 @@ function Department() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="tab-pane" id="tab-3">
+                                <div className={`tab-pane ${tab == 'tab-3' ? 'active show' : ''}`} id="tab-3">
                                     <div className="row">
                                         <div className="col-lg-8 details order-2 order-lg-1">
                                             <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
@@ -85,7 +96,7 @@ function Department() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="tab-pane" id="tab-4">
+                                <div className={`tab-pane ${tab == 'tab-4' ? 'active show' : ''}`} id="tab-4">
                                     <div className="row">
                                         <div className="col-lg-8 details order-2 order-lg-1">
                                             <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam
@@ -102,7 +113,7 @@ function Department() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="tab-pane" id="tab-5">
+                                <div className={`tab-pane ${tab == 'tab-5' ? 'active show' : ''}`} id="tab-5">
                                     <div className="row">
                                         <div className="col-lg-8 details order-2 order-lg-1">
                                             <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
